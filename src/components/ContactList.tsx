@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getContacts, Contact } from '../services/contactService';
-import AddContactForm from './AddContactForm';
+
 
 const ContactList: React.FC = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
@@ -19,10 +19,6 @@ const ContactList: React.FC = () => {
     fetchContacts();
   }, []);
 
-  const handleContactAdded = (newContact: Contact) => {
-    setContacts([...contacts, newContact]);
-  };
-
   return (
     <div>
       <h1>Contact List</h1>
@@ -36,7 +32,6 @@ const ContactList: React.FC = () => {
           );
         })}
       </ul>
-      {<AddContactForm onContactAdded={handleContactAdded} />}
     </div>
   );
 };
