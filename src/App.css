@@ -1,3 +1,21 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* App Component Styles */
 .App {
   text-align: center;
 }
@@ -14,7 +32,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3498db;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +46,120 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Contact List Styles */
+.ContactList {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.ContactList h1 {
+  color: #3498db;
+}
+
+.ContactList ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ContactItem {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/* Add Contact Form Styles */
+.AddContactForm {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  padding: 20px;
+}
+
+.AddContactForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.AddContactForm label {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.AddContactForm input {
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.AddContactForm button {
+  background-color: #2ecc71;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.AddContactForm button:hover {
+  background-color: #27ae60;
+}
+
+/* Home Button Styles */
+.HomeButton {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.HomeButton-link {
+  background-color: #3498db;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.HomeButton-link:hover {
+  background-color: #2980b9;
+}
+
+/* Landing Page Styles */
+.LandingPage {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.LandingPage h1 {
+  color: #3498db;
+  margin-bottom: 20px;
+}
+
+.LandingPage-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.LandingPage-nav li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.LandingPage-link {
+  background-color: #3498db;
+  border-radius: 4px;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.LandingPage-link:hover {
+  background-color: #2980b9;
 }
