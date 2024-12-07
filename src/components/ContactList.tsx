@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { getContacts, Contact } from '../services/contactService';
-import AddContactForm from './AddContactForm';
+import HomeButton from './HomeButton';
+import '../App.css';
 
 const ContactList: React.FC = () => {
   const [contacts, setContacts] = useState<Contact[]>([]);
@@ -19,25 +20,22 @@ const ContactList: React.FC = () => {
     fetchContacts();
   }, []);
 
-  const handleContactAdded = (newContact: Contact) => {
-    setContacts([...contacts, newContact]);
-  };
-
   return (
-    <div>
-      <h1>Contact List</h1>
-      <ul>
-        {contacts.map(contact => {
-          console.log('Rendering contact with Id:', contact.id); // Add logging
-          return (
-            <li key={contact.id}>
-              {contact.name} - {contact.email} - {contact.phone}
-            </li>
-          );
-        })}
-      </ul>
-      {<AddContactForm onContactAdded={handleContactAdded} />}
-    </div>
+      <><HomeButton /><>
+      <div className="ContactList">
+        <h1>Contact List</h1>
+        <ul>
+          {contacts.map(contact => {
+            return (
+              <li key={contact.id} className="ContactItem">
+                {contact.name} - {contact.email} - {contact.phone}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+
+    </></>
   );
 };
 
