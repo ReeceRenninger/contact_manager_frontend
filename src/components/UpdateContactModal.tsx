@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Contact } from '../services/contactService'; // Import the Contact type
-import '../App.css'; // Use the updated App.css
+import { Contact } from '../services/contactService'; 
+import '../App.css'; 
 
 interface UpdateContactModalProps {
   contact: Contact;
